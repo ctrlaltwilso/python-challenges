@@ -1,4 +1,3 @@
-import unittest
 # spot_swaps -> two  strings, source and target
 # only lowercase english letters
 # return list of tuples: 
