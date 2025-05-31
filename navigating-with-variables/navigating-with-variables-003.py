@@ -24,7 +24,7 @@ def solution(array1, array2):
         if val < best_value:
             best_value, best_rotation = val, rotated
         elif val == best_value:
-            if ''.join(str(x) for x in rotated) < ''.join(str(x) for x in best_rotation):
+            if ''.join(str(x) for x in rotated) < ''.join(str(x) for x in best_rotation): # type: ignore
                 best_rotation = rotated
 
     return best_rotation, best_value
