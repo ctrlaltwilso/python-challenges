@@ -18,7 +18,7 @@ def house_game(houses):
 
         for j in range(n):
             if len(string_houses[j]) >= i + 1:
-                transfers[j] = string_houses[j][-(i+1)]
+                transfers[j] = string_houses[j][-(i+1)] # type: ignore
                 # Remove the digit from donor
                 new_houses[j] = string_houses[j][:-(i+1)] + string_houses[j][-(i):] if i != 0 else string_houses[j][:-1]
 
@@ -26,7 +26,7 @@ def house_game(houses):
         for j in range(n):
             if transfers[j] is not None:
                 idx = (j + 1) % n
-                new_houses[idx] = transfers[j] + new_houses[idx]
+                new_houses[idx] = transfers[j] + new_houses[idx] # type: ignore
 
         if new_houses == string_houses:
             break
